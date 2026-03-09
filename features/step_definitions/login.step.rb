@@ -1,14 +1,15 @@
 
-Dado('que loguei') do
+
+Dado('que o usuario queira se logar') do
   visit ''
   sleep 5
 end
 
-Quando('eu logar') do
+Quando('ele digitar suas credenciais validas') do
   
 end
 
-Então('logaremos') do
+Então('deve acessar sua conta com sucesso') do
   
 end
 

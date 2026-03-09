@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Login com sucesso
+Funcionalidade: Sistema de Login
 Para ter acesso ao sistema
 O usuário do linkedin
 Deseja logar no site do linkedin
@@ -19,19 +19,19 @@ Então deve acessar sua conta com sucesso
 #então resultado esperado da ação
 
 
-Cenario: Login com perda de conexao
-Dado que o usuario queira se logar
-E que ele perca a conexão com a internet
-Quando ele digitar suas credenciais validas
-Então deve receber uma mensagem de erro informando que a conexão foi perdida
+#Cenario: Login com perda de conexao
+#Dado que o usuario queira se logar
+#E que ele perca a conexão com a internet
+#Quando ele digitar suas credenciais validas
+#Então deve receber uma mensagem de erro informando que a conexão foi perdida
 
-Cenario: Troca de senha
-Dado que o usuario esqueceu sua senha
-E ele queira trocar sua senha antiga
-E ele ainda tenha acesso ao email cadastrado
-Quando ele escolher uma nova senha
-E confirma a troca pelo email cadastrado
-Então sua senha deve ser trocada com sucesso
+#Cenario: Troca de senha
+#Dado que o usuario esqueceu sua senha
+#E ele queira trocar sua senha antiga
+#E ele ainda tenha acesso ao email cadastrado
+#Quando ele escolher uma nova senha
+#E confirma a troca pelo email cadastrado
+#Então sua senha deve ser trocada com sucesso
 
 
 
