@@ -1,30 +1,29 @@
-#Automação de Testes – Login LinkedIn
+# Automação de Testes – Login LinkedIn
 
-Projeto de automação de testes web desenvolvido em Ruby utilizando BDD para validar o fluxo de login do LinkedIn e a subsequente navegação para a página principal (home).
+Projeto de **automação de testes web** desenvolvido em **Ruby** utilizando **BDD** para validar o fluxo de login do LinkedIn e a navegação para a **página inicial (home)**.
 
-O objetivo deste projeto é demonstrar a criação de testes automatizados utilizando boas práticas de Page Object, BDD e automação de interface web.
+O objetivo é demonstrar a criação de testes automatizados seguindo boas práticas de **Page Object**, **BDD** e automação de interface web.
 
-#Tecnologias utilizadas
+---
 
-Este projeto utiliza as seguintes ferramentas:
+## Tecnologias utilizadas
 
-Ruby
+- Ruby  
+- Cucumber  
+- Capybara  
+- Selenium WebDriver  
+- SitePrism  
+- ChromeDriver  
 
-Cucumber
+---
 
-Capybara
+## Cenário automatizado
 
-Selenium WebDriver
+O projeto automatiza o **fluxo completo de login** e valida se o usuário é redirecionado corretamente para a página inicial.
 
-SitePrism
+### Cenário implementado
 
-ChromeDriver
-
-#Cenário automatizado
-
-A automação testa o fluxo completo de login e valida se o usuário foi redirecionado corretamente para a página inicial (home).
-
-Cenário implementado
+```gherkin
 Funcionalidade: Sistema de Login
   Cenário: Login com sucesso
     Dado que o usuário queira se logar
@@ -32,31 +31,31 @@ Funcionalidade: Sistema de Login
     Então deve acessar sua conta com sucesso e visualizar a página inicial
 Passos realizados pelo teste
 
-Acessa a página de login.
+Acessa a página de login
 
-Preenche o campo de email.
+Preenche o campo de email
 
-Preenche o campo de senha.
+Preenche o campo de senha
 
-Clica no botão de login.
+Clica no botão de login
 
-Verifica se a página inicial (home) foi carregada, confirmando a presença de elementos chave.
+Verifica se a página inicial (home) foi carregada, confirmando a presença de elementos chave
 
-#Estrutura do projeto
-ProjetoQA
+Estrutura do projeto
+ProjetoQA/
 │
-├── features
-│   ├── bdd
+├── features/
+│   ├── bdd/
 │   │   └── login.feature
 │   │
-│   ├── pages
+│   ├── pages/
 │   │   ├── login_page.rb
 │   │   └── home_page.rb
 │   │
-│   ├── step_definitions
+│   ├── step_definitions/
 │   │   └── login_step.rb
 │   │
-│   └── support
+│   └── support/
 │       ├── env.rb
 │       ├── hooks.rb
 │       └── page_initialize.rb
@@ -69,16 +68,23 @@ features/pages	Page Objects com mapeamento de elementos
 features/step_definitions	Implementação dos passos dos cenários
 features/support	Configurações do ambiente de teste
 Como executar o projeto
-1. Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
-2. Entrar na pasta do projeto
-cd nome-do-projeto
-3. Instalar as dependências
-bundle install
-4. Executar os testes
-cucumber
 
-#Conceitos aplicados
+Clonar o repositório
+
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+Entrar na pasta do projeto
+
+cd nome-do-projeto
+
+Instalar as dependências
+
+bundle install
+
+Executar os testes
+
+cucumber
+Conceitos aplicados
 
 BDD (Behavior Driven Development)
 
@@ -88,10 +94,10 @@ Automação de testes web
 
 Testes end-to-end
 
-#Objetivo do projeto
+Objetivo do projeto
 
-Este projeto foi desenvolvido com fins de aprendizado em automação de testes, demonstrando a criação de cenários BDD e automação de interações com páginas web de forma estruturada e de fácil manutenção.
+Este projeto foi desenvolvido com fins de aprendizado em automação de testes, demonstrando a criação de cenários BDD e a automação de interações com páginas web de forma estruturada e de fácil manutenção.
 
-#Autor
+Autor
 
 Projeto desenvolvido para estudos em Qualidade de Software e Automação de Testes.
