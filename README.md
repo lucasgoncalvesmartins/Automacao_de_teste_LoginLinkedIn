@@ -1,124 +1,79 @@
-# Automação de Testes – Login LinkedIn
+Automação de Testes: Login e Verificação de Feed no LinkedIn
+Este projeto apresenta uma suíte de testes automatizados para a plataforma LinkedIn, desenvolvida com Ruby e as melhores práticas de BDD (Behavior Driven Development). O objetivo é validar o fluxo de login e confirmar o carregamento bem-sucedido da página principal (feed) do usuário.
+O projeto demonstra a aplicação de conceitos essenciais de automação de testes web, como o padrão Page Objects, a escrita de cenários de negócio em Gherkin e a configuração de um ambiente de testes robusto.
 
-Projeto de **automação de testes web** desenvolvido com Ruby utilizando BDD para validar o comportamento da página de login do LinkedIn.
-
-O objetivo deste projeto é demonstrar a criação de testes automatizados utilizando boas práticas de **Page Object**, **BDD** e **automação de interface web**.
-
----
-
-# Tecnologias utilizadas
-
-Este projeto foi desenvolvido utilizando as seguintes ferramentas:
-
-* Ruby
-* Cucumber
-* Capybara
-* Selenium WebDriver
-* SitePrism
-* ChromeDriver
-
----
-
-# Cenário automatizado
-
-A automação testa o fluxo de login no LinkedIn.
-
-### Cenário implementado
-
-```
+Tecnologias Utilizadas
+Linguagem: Ruby
+Framework de Testes: Cucumber (para BDD)
+Interação com Navegador: Capybara
+Driver do Navegador: Selenium WebDriver
+Padrão de Projeto: SitePrism (para implementação de Page Objects)
+Gerenciador de Dependências: Bundler
+сцена Cenário Automatizado
+A automação executa e valida o fluxo de login de um usuário no LinkedIn.
+Cenário: Login com Sucesso
+gherkin
 Funcionalidade: Sistema de Login
+  Para ter acesso às funcionalidades do LinkedIn
+  Como um usuário cadastrado
+  Eu quero me autenticar no sistema
 
-Cenário: Login com sucesso
-Dado que o usuário queira se logar
-Quando ele digitar suas credenciais válidas
-Então deve acessar sua conta com sucesso
-```
+  Cenário: Login com sucesso
+    Dado que o usuário acesse a página de login
+    Quando ele digitar suas credenciais válidas
+    Então ele deve ser redirecionado para a página principal
+O que o teste faz:
+Abre o navegador e acessa a página de login do LinkedIn.
+Preenche os campos de e-mail e senha com as credenciais do usuário.
+Clica no botão para efetuar o login.
+Verifica se o login foi bem-sucedido, confirmando a presença de elementos chave na página do feed, como o link "Início" e o botão "Começar publicação".
 
-O teste realiza:
-
-1. Acessa a página de login
-2. Preenche o campo de email
-3. Preenche o campo de senha
-4. Clica no botão de login
-5. Verifica o comportamento esperado do sistema
-
----
-
-# Estrutura do projeto
-
-```
-ProjetoQA
+Estrutura do Projeto
+O projeto segue uma estrutura padrão para testes com Cucumber, separando responsabilidades para maior clareza e manutenção.
+Plain Text
+ProjetoQA/
 │
-├── features
-│   ├── bdd
-│   │   └── login.feature
+├── features/
+│   ├── bdd/
+│   │   └── login.feature         # Cenários de teste em Gherkin
 │   │
-│   ├── pages
-│   │   └── login_page.rb
+│   ├── pages/
+│   │   ├── home_page.rb          # Page Object da página principal (feed)
+│   │   └── login_page.rb         # Page Object da página de login
 │   │
-│   ├── step_definitions
-│   │   └── login.step.rb
+│   ├── step_definitions/
+│   │   └── login_step.rb         # Implementação dos passos dos cenários
 │   │
-│   └── support
-│       └── env.rb
+│   └── support/
+│       ├── env.rb                # Configurações de ambiente (Capybara, Selenium)
+│       ├── hooks.rb              # Ações a serem executadas antes/depois dos testes
+│       └── page_initialize.rb    # Inicialização dos Page Objects
 │
 └── README.md
-```
 
-Descrição das pastas:
-
-| Pasta            | Função                                   |
-| ---------------- | ---------------------------------------- |
-| features/bdd     | Cenários escritos em Gherkin             |
-| pages            | Page Objects com mapeamento de elementos |
-| step_definitions | Implementação dos passos                 |
-| support          | Configurações do projeto                 |
-
----
-
-# Como executar o projeto
-
-### Clonar o repositório
-
-```
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-### Entrar na pasta do projeto
-
-```
-cd nome-do-projeto
-```
-
-###  Instalar as dependências
-
-```
+Como Executar o Projeto
+Pré-requisitos
+Ruby instalado
+Bundler instalado (gem install bundler)
+Google Chrome instalado
+Passos para Execução
+Clonar o repositório:
+Bash
+git clone https://github.com/lucasgoncalvesmartins/Criando_Automacoes_com_Ruby.git
+Acessar a pasta do projeto:
+Bash
+cd Criando_Automacoes_com_Ruby
+Instalar as dependências:
+Bash
 bundle install
-```
-
-### Executar os testes
-
-```
+Executar os testes:
+Bash
 cucumber
-```
 
----
-
-#  Conceitos aplicados
-
-* BDD (Behavior Driven Development)
-* Page Object Pattern
-* Automação de testes web
-* Testes end-to-end
-
----
-
-# Objetivo do projeto
-
-Este projeto foi desenvolvido com fins de **aprendizado em automação de testes**, demonstrando a criação de cenários BDD e automação de interações com páginas web.
-
----
-
-# Autor
-
-Projeto desenvolvido para estudos em **Qualidade de Software e Automação de Testes**.
+Conceitos Aplicados
+BDD (Behavior Driven Development ): Escrita de testes focada no comportamento do sistema, facilitando a comunicação entre equipes.
+Page Object Pattern: Abstração das páginas da interface em classes, centralizando os seletores de elementos e interações.
+Automação de Testes Web: Simulação da interação de um usuário real com a aplicação através do navegador.
+Testes End-to-End (E2E): Validação de um fluxo completo do sistema, desde a interface até a resposta final.
+🎯 Objetivo do Projeto
+Este projeto foi desenvolvido como um case de estudo prático em Qualidade de Software e Automação de Testes, com o objetivo de solidificar e demonstrar habilidades na criação de testes automatizados robustos, legíveis e de fácil manutenção.
