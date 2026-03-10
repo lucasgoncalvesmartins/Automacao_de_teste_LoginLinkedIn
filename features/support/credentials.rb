@@ -2,7 +2,7 @@
 #Arquivo para armazenar as credenciais de acesso
 CREDENTIAL = {
     user: {
-        email: "sua email",
-        senha: "seu senha"
+        email: "",
+        senha: ""
     }
 }
